@@ -1,0 +1,266 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+:root {
+   --font-display: "Bebas Neue", sans-serif;
+   --font-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+   --bg: #121212;
+   --ink: #ffffff;
+   --accent: #2c57c2;
+   --eyebrow: #396ef3;
+   --radius-md: 8px;
+   --radius-lg: 12px;
+   --shadow-btn: 0 8px 24px rgba(37, 99, 235, 0.35);
+   --section-pad: clamp(20px, 2vw, 30px);
+   --gap-md: clamp(20px, 3vw, 40px);
+   --container: 900px;
+   --container-wide: 1000px;
+   --ratio-embed: 4 / 3;
+}
+
+body {
+   font-family: var(--font-sans);
+   background-color: var(--bg);
+   color: var(--ink);
+   line-height: 1.6;
+}
+
+.hero {
+   min-height: 90svh;
+   display: grid;
+   place-items: center;
+   text-align: center;
+   padding: 48px 16px;
+   position: relative;
+   color: var(--ink);
+   background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../images/joost1.jpg") center / cover no-repeat;
+}
+
+.hero h1 {
+   font-family: var(--font-display);
+   letter-spacing: 1px;
+   margin: 0 0 10px;
+   font-weight: 700;
+   font-size: clamp(42px, 8vw, 98px);
+   line-height: 1;
+}
+
+.hero h2 {
+   margin-bottom: clamp(16px, 2.5vw, 32px);
+   font-weight: 600;
+   font-size: clamp(14px, 2vw, 20px);
+   line-height: 1.5;
+   opacity: 0.6;
+}
+
+.hero p {
+   font-family: var(--font-display);
+   letter-spacing: 5px;
+   margin: 0 0 20px;
+   font-weight: 400;
+   font-size: clamp(12px, 2vw, 20px);
+   line-height: 1.5;
+   opacity: 0.7;
+}
+
+.section {
+   max-width: var(--container);
+   margin-inline: auto;
+   padding-block: var(--section-pad);
+}
+
+.eyebrow {
+   font-family: var(--font-sans);
+   font-weight: 900;
+   letter-spacing: 0.12em;
+   text-transform: uppercase;
+   font-size: clamp(12px, 1.8vw, 18px);
+   line-height: 1.5;
+   color: var(--eyebrow);
+   opacity: 0.7;
+   margin: 8px 0 6px;
+}
+
+.titles {
+   font-family: var(--font-display);
+   font-size: clamp(22px, 2.6vw, 32px);
+   letter-spacing: 0.4px;
+   color: var(--ink);
+   line-height: 1.15;
+}
+
+.btn-primary {
+   display: inline-flex;
+   margin-top: 18px;
+   padding: 16px 28px;
+   border-radius: 9999px;
+   background: var(--accent);
+   color: #fff;
+   text-decoration: none;
+   font-weight: 600;
+   font-family: var(--font-display);
+   box-shadow: var(--shadow-btn);
+}
+.btn-primary:hover {
+   filter: brightness(1.2);
+}
+
+.btn-primary:focus-visible {
+   outline: 2px solid var(--accent);
+   outline-offset: 3px;
+}
+
+.text-center {
+   text-align: center;
+}
+
+.song-title {
+   padding-block: clamp(24px, 3vw, 48px);
+}
+
+.meta {
+   margin: 0 0 10px;
+   line-height: 1.6;
+   font-size: clamp(12px, 1.8vw, 16px);
+   opacity: 0.7;
+   color: var(--ink);
+}
+
+.grid-3col {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   gap: var(--gap-md);
+   align-items: center;
+   padding-block: clamp(24px, 3vw, 48px);
+}
+
+.media-square {
+   width: 100%;
+   object-fit: cover;
+   aspect-ratio: 1 / 1;
+   border-radius: var(--radius-lg);
+}
+
+.embed iframe {
+   width: 100%;
+   display: block;
+   aspect-ratio: var(--ratio-embed);
+   height: auto;
+   border-radius: var(--radius-lg);
+   border: 0;
+}
+
+.song-links {
+   display: flex;
+   gap: 10px;
+   margin-top: 8px;
+   flex-direction: column;
+}
+
+.links {
+   color: var(--accent);
+   text-decoration: none;
+   font-family: var(--font-display);
+}
+
+.links:hover {
+   filter: brightness(1.2);
+   text-decoration: underline;
+}
+
+.links:focus-visible {
+   outline: 2px solid var(--accent);
+   outline-offset: 2px;
+   text-decoration: underline;
+}
+
+.grid-2col {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: var(--gap-md);
+   align-items: center;
+}
+
+footer {
+   color: var(--ink);
+   position: relative;
+   background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../images/concert.jpg") center / cover no-repeat;
+   padding: 56px 20px;
+   overflow: hidden;
+}
+
+.row {
+   position: relative;
+   max-width: var(--container-wide);
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
+}
+
+.column ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.column li + li {
+   margin-top: 8px;
+}
+
+.artist-grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 800px) {
+   .hero {
+      min-height: 75svh;
+   }
+
+   .section {
+      max-width: 400px;
+      padding-inline: 16px;
+   }
+
+   .row {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      justify-items: center;
+   }
+
+   .column {
+      max-width: 400px;
+      margin-inline: auto; /* if you want it centered */
+   }
+
+   .grid-2col {
+      grid-template-columns: 1fr;
+      gap: 20px;
+   }
+
+   .grid-3col {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      justify-items: center;
+   }
+
+   .embed iframe {
+      aspect-ratio: var(--ratio-embed);
+      height: auto;
+      border-radius: 6px;
+   }
+
+   .featured-header {
+      padding-block-end: clamp(24px, 3vw, 48px);
+   }
+}
