@@ -222,6 +222,14 @@ footer {
    grid-template-columns: 1fr 1fr;
 }
 
+.reader-show[hidden] {
+   display: block;
+}
+
+.reader-show[hidden] .btn-primary {
+   display: inline-flex;
+}
+
 @media (max-width: 800px) {
    .hero {
       min-height: 75svh;
