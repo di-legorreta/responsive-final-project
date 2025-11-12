@@ -69,7 +69,9 @@
                </div>
             </div>
          </section>
-
+         <nav class="text-center" aria-label="Page controls">
+            <a href="#playlist" class="btn-primary">Playlist</a>
+         </nav>
          <section id="featured" class="section">
             <div class="featured-header">
                <h4 class="text-center eyebrow">.TOP SONGS.</h4>
@@ -333,13 +335,11 @@
                   ></iframe>
                </div>
             </div>
-            <div class="text-center">
-               <a href="#top" class="btn-primary" data-back-to-top
-                  >Back to Top</a
-               >
-            </div>
          </section>
       </main>
+      <nav class="text-center" aria-label="Page controls">
+         <a href="#top" class="btn-primary">Back to Top</a>
+      </nav>
       <footer id="site-footer">
          <div class="row">
             <div class="column">
@@ -505,21 +505,5 @@
             </div>
          </div>
       </footer>
-      <script>
-         document.addEventListener("DOMContentLoaded", () => {
-            const backToTopLink = document.querySelector("[data-back-to-top]");
-            if (!backToTopLink) return;
-            backToTopLink.addEventListener("click", (event) => {
-               event.preventDefault();
-               const prefersReducedMotion = window.matchMedia(
-                  "(prefers-reduced-motion: reduce)"
-               ).matches;
-               window.scrollTo({
-                  top: 0,
-                  behavior: prefersReducedMotion ? "auto" : "smooth",
-               });
-            });
-         });
-      </script>
    </body>
 </html>
